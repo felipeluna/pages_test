@@ -26,6 +26,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: create report
         run: date +%s > report.txt
+        
+      - name: install ruby deps
+        run: gem install redcarpet
       - name: create report with ruby
         run: ruby main.rb > reportruby.txt
       - name: Commit report
